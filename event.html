@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            row-gap:"20px"
+            
+        }
+        #grand{
+            padding: 50px;
+            width:300px;
+            border:2px solid black;
+        }
+        #parent{
+            padding:50px;
+            width:200px;
+            border:2px solid black;
+        }
+        #child{
+            padding:50px;
+            width:100px;
+            border:2px solid black;
+        }
+        #trickleG{
+            padding: 50px;
+            width:300px;
+            border:2px solid black;
+        }
+        #trickleP{
+            padding: 50px;
+            width:200px;
+            border:2px solid black;
+        }
+        #trickleC{
+            padding: 50px;
+            width:100px;
+            border:2px solid black;
+        }
+        #trickleGpropagation{
+            padding: 50px;
+            width:300px;
+            border:2px solid black;
+        }
+        #tricklePpropagation{
+            padding: 50px;
+            width:200px;
+            border:2px solid black;
+        }
+        #trickleCpropagation{
+            padding: 50px;
+            width:100px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p>Event Bubbling</p>
+    <div id="grand">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+
+    <p>Set Time out</p>
+    <div id="trickleG">
+        <div id="trickleP">
+            <div id="trickleC"></div>
+        </div>
+    </div>
+    
+    <p>Event trickling</p>
+    <div id="trickleGpropagation">
+        <div id="tricklePpropagation">
+            <div id="trickleCpropagation"></div>
+        </div>
+    </div>
+    <script src="event.js"></script>
+</body>
+</html>
